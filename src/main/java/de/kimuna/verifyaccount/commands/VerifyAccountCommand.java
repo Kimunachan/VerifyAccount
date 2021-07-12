@@ -6,9 +6,29 @@ import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.interactions.components.Button;
+import org.jetbrains.annotations.NotNull;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.concurrent.TimeUnit;import de.kimuna.verifyaccount.VerifyAccount;
+import de.kimuna.verifyaccount.commands.types.ServerCommand;
+import net.dv8tion.jda.api.entities.Member;
+import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.entities.TextChannel;
+import net.dv8tion.jda.api.interactions.components.Button;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.concurrent.TimeUnit;import de.kimuna.verifyaccount.VerifyAccount;
+import de.kimuna.verifyaccount.commands.types.ServerCommand;
+import net.dv8tion.jda.api.entities.Member;
+import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.entities.TextChannel;
+import net.dv8tion.jda.api.interactions.components.Button;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.concurrent.TimeUnit;
 
 public class VerifyAccountCommand implements ServerCommand {
 
@@ -65,6 +85,5 @@ public class VerifyAccountCommand implements ServerCommand {
                 }
             }
         }
-
     }
 }

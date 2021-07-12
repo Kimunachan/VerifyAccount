@@ -15,7 +15,7 @@ public class CommandListener extends ListenerAdapter {
         prefix = VerifyAccount.INSTANCE.prop.getProperty("prefix") != null ? VerifyAccount.INSTANCE.prop.getProperty("prefix") : "$$$";
 
         if (message.startsWith(prefix)) {
-            String[] split = message.substring(prefix.length() + 1).split(" ");
+            String[] split = message.substring(prefix.length()).split(" ");
             String[] args = Arrays.copyOfRange(split, 1, split.length);
             String command = split[0];
 
