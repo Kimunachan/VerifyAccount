@@ -1,3 +1,5 @@
 pom.xml
 .idea/*
 ./src/main/resources/.env
+./src/main/resources/data.db
+./src/main/resources/config.properties

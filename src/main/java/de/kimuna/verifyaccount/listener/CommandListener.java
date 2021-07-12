@@ -12,7 +12,7 @@ public class CommandListener extends ListenerAdapter {
     public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
         String message = event.getMessage().getContentRaw();
         String prefix;
-        prefix = VerifyAccount.INSTANCE.prop.getProperty("prefix") != null ? VerifyAccount.INSTANCE.prop.getProperty("prefix") : "betachan";
+        prefix = VerifyAccount.INSTANCE.prop.getProperty("prefix") != null ? VerifyAccount.INSTANCE.prop.getProperty("prefix") : "$$$";
 
         if (message.startsWith(prefix)) {
             String[] split = message.substring(prefix.length() + 1).split(" ");

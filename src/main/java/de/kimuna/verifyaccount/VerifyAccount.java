@@ -2,6 +2,7 @@ package de.kimuna.verifyaccount;
 
 import de.kimuna.verifyaccount.handler.CommandHandler;
 import de.kimuna.verifyaccount.listener.CommandListener;
+import de.kimuna.verifyaccount.listener.VerifyButtonListener;
 import de.kimuna.verifyaccount.sql.SQLite;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.OnlineStatus;
@@ -35,11 +36,12 @@ public class VerifyAccount {
 
         prop.load(new FileInputStream("src/main/resources/config.properties"));
         DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(dotenv.get("TOKEN"));
-        builder.setActivity(Activity.watching("beta help"));
+        builder.setActivity(Activity.playing("$$$verify"));
 
         builder.setStatus(OnlineStatus.ONLINE);
         this.commandManager = new CommandHandler();
         builder.addEventListeners(new CommandListener());
+        builder.addEventListeners(new VerifyButtonListener());
         database = new SQLite();
         shardManager = builder.build();
         System.out.println("Bot online.");
